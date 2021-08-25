@@ -16,7 +16,7 @@ node {
    }                                 
    stage('docker build/push') {            
      docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
-       def app = docker.build("nibblefritz/docker-nodejs-demo:${commit_id}", '.').push()
+       def app = docker.build("nibblefritz/python-password-generator:${commit_id}", '.').push()
      }                                     
    }                                       
 }                   
